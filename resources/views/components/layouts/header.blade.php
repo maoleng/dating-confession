@@ -1,7 +1,7 @@
 <div class="section-header wrap">
     <header class="header-wrap flex">
         <div class="header-logo">
-            <h1 class="is-logo"><a href="https://nurui.fueko.net"><img src="https://nurui.fueko.net/content/images/2018/12/nurui.svg" alt="Nurui"></a></h1>
+            <h1 class="is-logo"><a href="#"><img src="https://nurui.fueko.net/content/images/2018/12/nurui.svg" alt=""></a></h1>
         </div>
         <div class="header-nav">
             <nav class="nav-wrap">
@@ -13,48 +13,48 @@
                 <input type="checkbox" id="toggle" class="nav-toggle">
                 <ul class="nav-list">
                     <li class="nav-list-item">
-                        <a href="https://nurui.fueko.net/features/" class="nav-link">Features</a>
+                        <a href="#" class="nav-link">Features</a>
                         <span class="nav-dot"></span>
                     </li>
                     <li class="nav-list-item">
-                        <a href="https://nurui.fueko.net/style-guide/" class="nav-link">Style Guide</a>
+                        <a href="#" class="nav-link">Style Guide</a>
                         <span class="nav-dot"></span>
                     </li>
                     <li class="nav-list-item">
-                        <a href="https://nurui.fueko.net/membership/" class="nav-link">Membership</a>
+                        <a href="#" class="nav-link">Membership</a>
                         <span class="nav-dot"></span>
                     </li>
                     <li class="nav-list-item">
-                        <a href="https://themeforest.net/item/nurui-multipurpose-ghost-blog-theme/22243886" class="nav-link">Get Theme</a>
+                        <a href="#" class="nav-link">Get Theme</a>
                         <span class="nav-dot"></span>
                     </li>
                     <li class="nav-dots">
                         <ul class="nav-dots-wrap">
                             <li class="nav-list-item">
-                                <a href="https://nurui.fueko.net/newsletter/" class="nav-link">Newsletter</a>
+                                <a href="#" class="nav-link">Newsletter</a>
                                 <span class="nav-dot"></span>
                             </li>
                             <li class="nav-list-item">
-                                <a href="https://nurui.fueko.net/authors/" class="nav-link">Authors</a>
+                                <a href="#" class="nav-link">Authors</a>
                                 <span class="nav-dot"></span>
                             </li>
                             <li class="nav-list-item">
-                                <a href="https://nurui.fueko.net/tags/" class="nav-link">Tags</a>
+                                <a href="#" class="nav-link">Tags</a>
                                 <span class="nav-dot"></span>
                             </li>
                             <li class="nav-list-item">
-                                <a href="https://nurui.fueko.net/contact/" class="nav-link">Contact</a>
+                                <a href="#" class="nav-link">Contact</a>
                                 <span class="nav-dot"></span>
                             </li>
                             <li class="nav-list-item">
-                                <a href="https://nurui.fueko.net/demos/" class="nav-link">Demos</a>
+                                <a href="#" class="nav-link">Demos</a>
                                 <span class="nav-dot"></span>
                             </li>
                         </ul>
                     </li>
                     <li class="section-members-login-panel">
-                        <a class="members-signin" href="https://nurui.fueko.net/signin/">Sign in</a>
-                        <a class="members-signup" href="https://nurui.fueko.net/signup/">Sign up</a>
+                        <a class="members-signin" href="#">Sign in</a>
+                        <a class="members-signup" href="#">Sign up</a>
                     </li>
                     <li class="nav-list-item search-open">
                         <span>Search</span>

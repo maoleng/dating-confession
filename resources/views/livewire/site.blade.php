@@ -1,6 +1,4 @@
-@extends('theme.master')
-
-@section('content')
+<div>
     <div id="slider" class="section-scrollable">
         <div class="section-featured is-featured-image">
             <div class="featured-image" style="background-image: url(https://images.unsplash.com/photo-1524222717473-730000096953?ixlib&#x3D;rb-0.3.5&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;1080&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ&amp;s&#x3D;8b1938d0d4ef26e336db84568708980a)"></div>
@@ -204,4 +202,5 @@
             </div>
         </div>
     </div>
-@endsection
+
+</div>

@@ -1,30 +1,30 @@
 <footer class="section-footer">
     <div class="footer-wrap wrap flex">
         <div class="footer-logo flex">
-            <a class="is-logo" href="https://nurui.fueko.net"><img src="https://nurui.fueko.net/content/images/2018/12/nurui.svg" alt="Nurui"></a>
+            <a class="is-logo" href="#"><img src="https://nurui.fueko.net/content/images/2018/12/nurui.svg" alt=""></a>
         </div>
         <div class="footer-nav">
             <ul class="nav-list">
                 <li class="nav-list-item">
-                    <a href="https://nurui.fueko.net/features/" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">Features</a>
                     <span class="nav-dot"></span>
                 </li>
                 <li class="nav-list-item">
-                    <a href="https://nurui.fueko.net/style-guide/" class="nav-link">Style guide</a>
+                    <a href="#" class="nav-link">Style guide</a>
                     <span class="nav-dot"></span>
                 </li>
                 <li class="nav-list-item">
-                    <a href="https://nurui.fueko.net/contact/" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link">Contact</a>
                     <span class="nav-dot"></span>
                 </li>
                 <li class="nav-list-item">
-                    <a href="https://themeforest.net/item/nurui-multipurpose-ghost-blog-theme/22243886" class="nav-link">Get Theme</a>
+                    <a href="#" class="nav-link">Get Theme</a>
                     <span class="nav-dot"></span>
                 </li>
             </ul>
         </div>
         <div class="footer-social-links flex">
-            <a href="https://twitter.com/fuekothemes" aria-label="link Twitter">
+            <a href="#" aria-label="link Twitter">
                 <svg class="global-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
                 </svg>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="footer-copyright">
-        &copy; 2023 <a href="https://nurui.fueko.net">Nurui</a>.
-        All Right Reserved. Published with <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a> & <a href="https://fueko.net" target="_blank" rel="noopener noreferrer">Nurui</a>.
+        &copy; 2023 <a href="#">Datefession</a>.
+        All Right Reserved. Published with <a href="https://maoleng.dev/" target="_blank" rel="noopener noreferrer">MaoLeng</a>.
     </div>
 </footer>

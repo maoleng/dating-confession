@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="search-footer">
-            <a href="https://nurui.fueko.net">Nurui.</a>
+            <a href="#">Datefession.</a>
             <span>Thoughts, stories and ideas</span>
         </div>
     </div>

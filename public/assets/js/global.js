@@ -10,12 +10,6 @@ function unwrap(e) {
      e.parentNode.replaceChild(r, e)
 }
 
-/* Minor scripts
-   ––––––––––––––––––––––––––––––––––––––––––––––––––––
-   Website : fueko.net
-   Author  : fueko
-   License : MIT
-   –––––––––––––––––––––––––––––––––––––––––––––––––––– */
 document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".hamburger"),t=document.querySelector(".nav-dots"),n=document.querySelector(".footer-nav .nav-dots"),c=document.querySelector(".footer-nav .nav-dots-wrap"),o=document.getElementById("search");e&&e.addEventListener("click",function(){e.classList.toggle("is-active")}),t&&(t.addEventListener("click",function(){t.classList.toggle("is-active")}),document.addEventListener("click",function(e){e.target.closest(".nav-dots")||t.classList.remove("is-active")})),n&&(unwrap(n),unwrap(c)),o&&o.classList.add("is-load")});
 
 /* Fuse.js

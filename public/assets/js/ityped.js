@@ -11,7 +11,7 @@
 var initTyped = document.getElementById("ityped");
 if (initTyped) {
     ityped.init(document.querySelector(".ityped-wrap"), {
-        strings: ["Start your day with Nurui", "No spam ever, we promise!"],
+        strings: ["Start your day with me", "No spam ever, we promise!"],
         showCursor: true,
         typeSpeed:  150,
         startDelay: 500,
