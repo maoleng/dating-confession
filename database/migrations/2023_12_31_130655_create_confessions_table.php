@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('confessions', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('slug');
-            $table->string('banner');
+            $table->string('title')->unique();
+            $table->string('slug')->unique();
+            $table->string('banner')->nullable();
             $table->string('color')->nullable();
-            $table->text('trailer_content');
+            $table->text('trailer_content')->nullable();
             $table->longText('content');
             $table->bigInteger('view')->default(0);
             $table->dateTime('created_at')->default(now());
