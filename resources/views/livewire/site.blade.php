@@ -1,7 +1,7 @@
 <div>
     <div id="slider" class="section-scrollable">
         @foreach ($slider_confessions as $confession)
-            <div class="section-featured is-featured-image">
+            <div wire:key="'conf-slide-'.{{ $confession->id }}" class="section-featured is-featured-image">
                 <div class="featured-image" style="background-image: url({{ $confession->banner }})"></div>
                 <div class="featured-wrap flex">
                     <article class="featured-content">
@@ -11,7 +11,7 @@
                             </svg>
                             Featured
                         </span>
-                        <h2><a href="/{{ $confession->slug }}">{{ $confession->title }}</a><span class="featured-dot"></span></h2>
+                        <h2><a href="/{{ $confession->slug }}" wire:navigate>{{ $confession->title }}</a><span class="featured-dot"></span></h2>
                         <div class="item-meta white">
                             <time datetime="{{ $confession->created_at }}">{{ $confession->yearCreated }}</time>
                         </div>
@@ -26,12 +26,12 @@
     <div id="loop" class="section-loop wrap no-featured">
         <div class="items-wrap flex">
             @foreach ($confessions as $confession)
-                <livewire:confession.card :confession="$confession" />
+                <livewire:confession.card :confession="$confession" :cur_page="$cur_page" :wire:key="'conf-'.$confession->id" />
             @endforeach
         </div>
     </div>
     <nav class="section-pagination pagination">
-        <a class="older-posts" href="/page/2/">Older Posts</a>
+        <a class="older-posts" href="/?page=2">Older Posts</a>
     </nav>
     <div class="section-subscribe wrap">
         <div class="subscribe-wrap">
@@ -53,6 +53,12 @@
             </div>
         </div>
     </div>
+    <script>pageCount = '{{ $page_count }}'</script>
 
-    <script>const pageCount = '{{ $confessions->count() }}'</script>
 </div>
+@push('page-script')
+    <script src="{{ asset('assets/js/flickity.js') }}"></script>
+    <script src="{{ asset('assets/js/flickity-custom.js') }}"></script>
+    <script src="{{ asset('assets/js/infinite-scroll.js') }}"></script>
+    <script src="{{ asset('assets/js/infinite-scroll-custom.js') }}"></script>
+@endpush

@@ -9,5 +9,6 @@ class Card extends Component
 {
 
     public Confession $confession;
+    public int $cur_page;
 
 }

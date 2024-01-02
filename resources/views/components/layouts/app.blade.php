@@ -11,9 +11,8 @@
 </div>
 @include('components.layouts.notification')
 @include('components.layouts.search')
-<script src="{{ asset('assets/js/index.js') }}"></script>
+@stack('page-script')
 <script src="{{ asset('assets/js/global.js') }}"></script>
-<script src="{{ asset('assets/js/ityped.js') }}"></script>
 <link rel="stylesheet" href="{{ asset('assets/css/res.css') }}">
 </body>
 </html>
