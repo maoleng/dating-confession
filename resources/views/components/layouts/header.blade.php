@@ -53,7 +53,7 @@
                         </ul>
                     </li>
                     <li class="section-members-login-panel">
-                        <a class="members-signin" href="#">Sign in</a>
+                        <a class="members-signin" wire:navigate href="{{ route('login') }}">Sign in</a>
                         <a class="members-signup" href="#">Sign up</a>
                     </li>
                     <li class="nav-list-item search-open">
