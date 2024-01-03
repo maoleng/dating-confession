@@ -9,6 +9,7 @@ use Livewire\Component;
 class Site extends Component
 {
 
+    public string $body_class = 'home-template global-cta-violet';
     public $confessions;
     public Collection $slider_confessions;
     public int $page_count;

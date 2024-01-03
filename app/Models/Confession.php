@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\URL;
 
 class Confession extends Base
 {
@@ -28,14 +29,25 @@ class Confession extends Base
         return $this->color ? "tag-hash-$this->color tag-hash-post-$this->color no-image" : "is-image";
     }
 
+    public function getBodyClassAttribute(): string
+    {
+        return $this->color ? "post-template tag-story tag-hash-$this->color tag-hash-post-$this->color global-cta-violet" :
+            'post-template tag-lifestyle tag-hash-large';
+    }
+
     public function getHtmlImageCardAttribute(): string
     {
         return $this->banner ? "<div class=\"item-image\" style=\"background-image: url('$this->banner')\"></div>" : '';
     }
 
+    public function getUrlAttribute(): string
+    {
+        return URL::to($this->slug);
+    }
+
     public function isPaidContent(): bool
     {
-        return $this->trailer_content === null;
+        return $this->trailer_content !== null;
     }
 
 }

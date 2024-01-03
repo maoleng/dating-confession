@@ -1,3 +1,4 @@
+@section('body-class'){{ $body_class }}@endsection
 <div>
     <div id="slider" class="section-scrollable">
         @foreach ($slider_confessions as $confession)

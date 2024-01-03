@@ -2,16 +2,20 @@
 
 namespace App\Livewire\Confession;
 
+use App\Models\Confession;
 use Livewire\Component;
 
 class Show extends Component
 {
 
-    public string $slug = '';
-
-    public function mount($slug)
+    public Confession $confession;
+    public string $body_class = '';
+    public function mount($slug): void
     {
-        $this->slug = $slug;
+        $confession = Confession::query()->where('slug', $slug)->firstOrFail();
+        $this->confession = $confession;
+        $this->body_class = $confession->bodyClass;
+        //todo: other confessions
     }
 
 }
