@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->boolean('is_dark_mode')->default(false);
             $table->boolean('is_notification')->default(false);
-            $table->dateTime('premium_until')->default(null);
+            $table->dateTime('premium_until')->nullable();
             $table->string('facebook_id')->nullable();
             $table->string('google_id')->nullable();
             $table->string('login_url')->nullable();

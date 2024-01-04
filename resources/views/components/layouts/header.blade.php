@@ -1,3 +1,4 @@
+@php use \Illuminate\Support\Facades\Auth; @endphp
 <div class="section-header wrap">
     <header class="header-wrap flex">
         <div class="header-logo">
@@ -52,10 +53,16 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="section-members-login-panel">
-                        <a class="members-signin" wire:navigate href="{{ route('login') }}">Sign in</a>
-                        <a class="members-signup" href="#">Sign up</a>
-                    </li>
+                    @if (Auth::check())
+                        <li class="section-members-login-panel">
+                            <a class="members-account" wire:navigate href="{{ route('me') }}">Account</a>
+                            <a class="members-signout" href="#" data-members-signout>Sign out</a>
+                        </li>
+                    @else
+                        <li class="section-members-login-panel">
+                            <a class="members-signin" wire:navigate href="{{ route('auth.login') }}">Sign in</a>
+                        </li>
+                    @endif
                     <li class="nav-list-item search-open">
                         <span>Search</span>
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
