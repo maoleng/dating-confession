@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\SocialiteController;
 use App\Livewire\AuthAction;
 use App\Livewire\Confession\Show;
 use App\Livewire\Me;
