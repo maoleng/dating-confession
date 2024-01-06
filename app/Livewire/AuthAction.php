@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 use Livewire\Attributes\Layout;
@@ -24,7 +25,7 @@ class AuthAction extends Component
         return Socialite::driver('google')->redirect();
     }
 
-    public function callback()
+    public function callback(): Response
     {
         $user = Socialite::driver('google')->user();
 
@@ -39,8 +40,7 @@ class AuthAction extends Component
         );
         Auth::login($user);
 
-        return response("<script>window.close(); console.log(123)</script>");
-
+        return response("<script>window.close()</script>");
     }
 
     public function logout(): void
