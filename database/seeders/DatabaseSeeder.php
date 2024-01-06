@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Confession;
+use App\Models\Subscription;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 use Illuminate\Support\Str;
@@ -16,8 +17,27 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
        $this->createConfession(150);
+       $this->createSubscription();
 
 
+    }
+
+    private function createSubscription(): void
+    {
+        Subscription::query()->create([
+            'name' => 'A Week Premium',
+            'original_price' => 0,
+            'price' => 5000,
+            'duration' => 7,
+            'description' => '',
+        ]);
+        Subscription::query()->create([
+            'name' => 'A Month Premium',
+            'original_price' => 0,
+            'price' => 10000,
+            'duration' => 30,
+            'description' => '',
+        ]);
     }
 
 

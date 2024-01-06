@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\MustLogin;
 use App\Http\Middleware\MustNotLogin;
 use App\Livewire\AuthAction;
 use App\Livewire\Confession\Show;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Site::class)->name('index');
-Route::get('/me', Me::class)->name('me');
+Route::get('/me', Me::class)->middleware(MustLogin::class)->name('me');
 Route::group(['prefix' => 'auth', 'as' => 'auth.'], static function () {
     Route::get('/', static fn () => Auth::user())->name('me');
     Route::group(['middleware' => MustNotLogin::class], static function () {
