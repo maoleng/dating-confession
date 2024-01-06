@@ -24,7 +24,7 @@ class AuthAction extends Component
         return Socialite::driver('google')->redirect();
     }
 
-    public function callback(): RedirectResponse
+    public function callback()
     {
         $user = Socialite::driver('google')->user();
 
@@ -39,7 +39,8 @@ class AuthAction extends Component
         );
         Auth::login($user);
 
-        return redirect()->route('index');
+        return response("<script>window.close(); console.log(123)</script>");
+
     }
 
     public function logout(): void
