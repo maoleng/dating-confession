@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Jobs\UpdateTransactionTimeout;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -34,6 +35,13 @@ class User extends Authenticatable
         }
 
         return 'Free';
+    }
+
+    protected static function booted(): void
+    {
+        static::creating(static function (User $user) {
+            $user->created_at = now();
+        });
     }
 
 }

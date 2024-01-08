@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('facebook_id')->nullable();
             $table->string('google_id')->nullable();
             $table->string('login_url')->nullable();
-            $table->dateTime('created_at')->default(now());
+            $table->dateTime('created_at');
         });
     }
 

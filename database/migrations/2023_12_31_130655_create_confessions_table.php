@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('trailer_content')->nullable();
             $table->longText('content');
             $table->bigInteger('view')->default(0);
-            $table->dateTime('created_at')->default(now());
+            $table->dateTime('created_at');
         });
     }
 

@@ -19,8 +19,7 @@ return new class extends Migration
             $table->integer('duration');
             $table->integer('status')->default(TransactionStatus::WAITING);
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('job_id')->constrained();
-            $table->dateTime('created_at')->default(now());
+            $table->dateTime('created_at');
         });
     }
 
