@@ -2,7 +2,7 @@
 <div class="section-header wrap">
     <header class="header-wrap flex">
         <div class="header-logo">
-            <h1 class="is-logo"><a href="/" wire:navigate><img src="https://nurui.fueko.net/content/images/2018/12/nurui.svg" alt=""></a></h1>
+            <h1 class="is-logo"><a href="/" wire:navigate><img src="{{ asset('assets/img/logo.svg') }}" alt=""></a></h1>
         </div>
         <div class="header-nav">
             <nav class="nav-wrap">

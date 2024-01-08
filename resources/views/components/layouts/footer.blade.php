@@ -1,7 +1,7 @@
 <footer class="section-footer">
     <div class="footer-wrap wrap flex">
         <div class="footer-logo flex">
-            <a class="is-logo" href="#"><img src="https://nurui.fueko.net/content/images/2018/12/nurui.svg" alt=""></a>
+            <a class="is-logo" href="#"><img src="{{ asset('assets/img/logo.svg') }}" alt=""></a>
         </div>
         <div class="footer-nav">
             <ul class="nav-list">

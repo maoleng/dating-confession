@@ -20,4 +20,5 @@
         }
         :root {--ghost-accent-color: #2821fc;}
     </style>
+    @stack('page-style')
 </head>
