@@ -16,8 +16,10 @@ return new class extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->integer('money');
+            $table->integer('given_money');
             $table->integer('duration');
             $table->integer('status')->default(TransactionStatus::WAITING);
+            $table->string('note');
             $table->foreignId('user_id')->constrained();
             $table->dateTime('created_at');
         });

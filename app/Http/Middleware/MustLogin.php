@@ -17,7 +17,7 @@ class MustLogin
     public function handle(Request $request, Closure $next): Response
     {
         if (! Auth::check()) {
-            return redirect()->back();
+            return redirect()->route('index');
         }
 
         return $next($request);

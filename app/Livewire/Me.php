@@ -16,4 +16,9 @@ class Me extends Component
         $this->subscriptions = Subscription::all();
     }
 
+    public function chooseSubscription($subscription): void
+    {
+        $this->redirectRoute('payment.index', ['subscription' => $subscription], navigate: true);
+    }
+
 }

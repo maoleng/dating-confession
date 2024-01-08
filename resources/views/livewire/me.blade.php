@@ -27,7 +27,7 @@
     </div>
     <div id="loop" class="section-loop wrap">
         <div class="items-wrap membership-cards flex">
-            <a href="#" class="membership-card paid-tier paid-tier-1">
+            <a wire:click="chooseSubscription({{ $subscriptions[0]->id }})" href="javascript:void(0)" class="membership-card paid-tier paid-tier-1">
                 <div class="membership-card-content">
                     <h2 class="membership-card-title">{{ $subscriptions[0]->name }}</h2>
                     <h4 class="membership-card-price">{{ formatMoney($subscriptions[0]->price) }}<span style="font-size: 70%">đ</span><span>/tuần</span></h4>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#" class="membership-card paid-tier paid-tier-2">
+            <a wire:click="chooseSubscription({{ $subscriptions[1]->id }})" href="javascript:void(0)" class="membership-card paid-tier paid-tier-2">
                 <div class="membership-card-content">
                     <h2 class="membership-card-title">{{ $subscriptions[1]->name }}</h2>
                     <h4 class="membership-card-price">{{ formatMoney($subscriptions[1]->price) }}<span style="font-size: 70%">đ</span><span>/tháng</span></h4>
@@ -51,3 +51,17 @@
     </div>
 
 </div>
+@push('page-script')
+    <script>
+        document.querySelectorAll('.membership-card').forEach(function(card) {
+            card.addEventListener('click', function() {
+
+                var subscription = card.getAttribute('data-subscription');
+
+                console.log('Subscription:', subscription);
+            });
+        });
+
+    </script>
+
+@endpush

@@ -28,7 +28,7 @@ class User extends Authenticatable
         if ($this->premium_until) {
             $premium_until = Carbon::make($this->premium_until);
             if ($premium_until->gt(now())) {
-                return "Premium ({$premium_until->longRelativeDiffForHumans()})";
+                return "Premium ({$premium_until->longRelativeDiffForHumans(parts: 4)})";
             }
 
             return 'Free';
