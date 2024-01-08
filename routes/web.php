@@ -14,7 +14,8 @@ Route::get('/', Site::class)->name('index');
 Route::get('/me', Me::class)->middleware(MustLogin::class)->name('me');
 Route::group(['prefix' => 'payment', 'as' => 'payment.', 'middleware' => MustLogin::class], static function () {
     Route::get('/', Payment::class)->name('index');
-    Route::get('/validate', [Payment::class, 'validatePayment'])->name('validate');
+    Route::post('/cancel', [Payment::class, 'cancelPayment'])->name('cancel');
+    Route::post('/validate', [Payment::class, 'validatePayment'])->name('validate');
 });
 Route::group(['prefix' => 'auth', 'as' => 'auth.'], static function () {
     Route::get('/', static fn () => Auth::user())->name('me');

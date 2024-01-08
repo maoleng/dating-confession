@@ -14,6 +14,7 @@
 @stack('page-script')
 <script src="{{ asset('assets/js/global.js') }}"></script>
 <script src="{{ asset('assets/js/logout.js') }}"></script>
+<script src="{{ asset('assets/js/custom.js') }}"></script>
 <link rel="stylesheet" href="{{ asset('assets/css/res.css') }}">
 </body>
 </html>

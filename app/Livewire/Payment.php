@@ -46,6 +46,12 @@ class Payment extends Component
         $this->transaction = $transaction;
     }
 
+    public function cancelPayment(): void
+    {
+        Transaction::query()->where('status', TransactionStatus::WAITING)
+            ->where('user_id', Auth::id())->update(['status' => TransactionStatus::CANCEL]);
+    }
+
     public function validatePayment(): array
     {
         $transaction = Transaction::query()->where('status', TransactionStatus::WAITING)
@@ -53,7 +59,7 @@ class Payment extends Component
         if ($transaction === null) {
             return [
                 'status' => false,
-                'message' => 'Không có giao dịch',
+                'message' => 'Quá thời gian giao dịch',
             ];
         }
 

@@ -5,6 +5,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/gh-members-styles.css') }}">
     <script defer src="{{ asset('assets/js/cards.min.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/cards.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/custom.css') }}">
     <style>
         .paid-tier-2 {
             --gradient-paid-start: #b53cff;
