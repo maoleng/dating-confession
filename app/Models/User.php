@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Enums\TransactionStatus;
 use App\Jobs\UpdateTransactionTimeout;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -23,6 +25,11 @@ class User extends Authenticatable
         'created_at',
     ];
 
+    public function transactions(): HasMany
+    {
+        return $this->hasMany(Transaction::class);
+    }
+
     public function getPremiumDescriptionAttribute(): string
     {
         if ($this->premium_until) {
@@ -35,6 +42,11 @@ class User extends Authenticatable
         }
 
         return 'Free';
+    }
+
+    public function hasTransactionUncompleted(): bool
+    {
+        return $this->transactions()->where('status', TransactionStatus::WAITING)->exists();
     }
 
     protected static function booted(): void
