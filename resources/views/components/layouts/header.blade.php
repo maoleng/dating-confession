@@ -56,7 +56,7 @@
                     @if (Auth::check())
                         <li class="section-members-login-panel">
                             <a class="members-account" wire:navigate href="{{ route('me') }}">Account</a>
-                            <a class="members-signout" href="#" data-members-signout>Sign out</a>
+                            <a class="members-signout" href="javascript:void(0)" data-members-signout>Sign out</a>
                         </li>
                     @else
                         <li class="section-members-login-panel">

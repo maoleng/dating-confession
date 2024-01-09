@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="search-footer">
-            <a href="#">Datefession.</a>
+            <a href="{{ route('index') }}">Datefession.</a>
             <span>Thoughts, stories and ideas</span>
         </div>
     </div>

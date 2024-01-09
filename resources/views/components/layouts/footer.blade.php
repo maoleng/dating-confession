@@ -1,7 +1,7 @@
 <footer class="section-footer">
     <div class="footer-wrap wrap flex">
         <div class="footer-logo flex">
-            <a class="is-logo" href="#"><img src="{{ asset('assets/img/logo.svg') }}" alt=""></a>
+            <a class="is-logo" href="{{ route('index') }}"><img src="{{ asset('assets/img/logo.svg') }}" alt=""></a>
         </div>
         <div class="footer-nav">
             <ul class="nav-list">
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="footer-copyright">
-        &copy; 2023 <a href="#">Datefession</a>.
+        &copy; 2023 <a href="{{ route('index') }}">Datefession</a>.
         All Right Reserved. Published with <a href="https://maoleng.dev/" target="_blank" rel="noopener noreferrer">MaoLeng</a>.
     </div>
 </footer>
