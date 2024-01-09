@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Site::class)->name('index');
-Route::get('/me', Me::class)->middleware(MustLogin::class)->name('me');
 Route::get('/membership', Membership::class)->name('membership');
+Route::get('/contact', Membership::class)->name('contact');
+Route::get('/me', Me::class)->middleware(MustLogin::class)->name('me');
 Route::get('/collection', Collection::class)->middleware(MustLogin::class)->name('collection');
 Route::group(['prefix' => 'payment', 'as' => 'payment.', 'middleware' => MustLogin::class], static function () {
     Route::get('/', Payment::class)->name('index');

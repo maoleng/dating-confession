@@ -1,48 +1,35 @@
 <footer class="section-footer">
     <div class="footer-wrap wrap flex">
         <div class="footer-logo flex">
-            <a class="is-logo" href="{{ route('index') }}"><img src="{{ asset('assets/img/logo.svg') }}" alt=""></a>
+            <a class="is-logo" wire:navigate href="{{ route('index') }}"><img src="{{ asset('assets/img/logo.svg') }}" alt=""></a>
         </div>
         <div class="footer-nav">
             <ul class="nav-list">
                 <li class="nav-list-item">
-                    <a href="#" class="nav-link">Features</a>
+                    <a wire:navigate href="{{ route('membership') }}" class="nav-link">Hội viên</a>
                     <span class="nav-dot"></span>
                 </li>
                 <li class="nav-list-item">
-                    <a href="#" class="nav-link">Style guide</a>
-                    <span class="nav-dot"></span>
-                </li>
-                <li class="nav-list-item">
-                    <a href="#" class="nav-link">Contact</a>
-                    <span class="nav-dot"></span>
-                </li>
-                <li class="nav-list-item">
-                    <a href="#" class="nav-link">Get Theme</a>
+                    <a wire:navigate href="{{ route('contact') }}" class="nav-link">Liên hệ</a>
                     <span class="nav-dot"></span>
                 </li>
             </ul>
         </div>
         <div class="footer-social-links flex">
-            <a href="#" aria-label="link Twitter">
+            <a href="javascript:void(0)" aria-label="link Twitter">
                 <svg class="global-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
                 </svg>
             </a>
-            <a href="#" aria-label="link Vimeo">
+            <a href="javascript:void(0)" aria-label="link Facebook">
                 <svg class="global-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.493 4.797l-.013.01z"/>
-                </svg>
-            </a>
-            <a href="#" aria-label="link YouTube">
-                <svg class="global-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+                    <path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/>
                 </svg>
             </a>
         </div>
     </div>
     <div class="footer-copyright">
-        &copy; 2023 <a href="{{ route('index') }}">Datefession</a>.
-        All Right Reserved. Published with <a href="https://maoleng.dev/" target="_blank" rel="noopener noreferrer">MaoLeng</a>.
+        &copy; 2023 <a wire:navigate href="{{ route('index') }}">Datefession</a>.
+        All Right Reserved.
     </div>
 </footer>

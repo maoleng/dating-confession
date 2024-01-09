@@ -23,8 +23,8 @@
                         <span class="nav-dot {{ Route::is('membership') ? 'nav-dot-current' : '' }}"></span>
                     </li>
                     <li class="nav-list-item">
-                        <a href="#" class="nav-link">Liên hệ</a>
-                        <span class="nav-dot"></span>
+                        <a wire:navigate href="{{ route('contact') }}" class="nav-link">Liên hệ</a>
+                        <span class="nav-dot" {{ Route::is('contact') ? 'nav-dot-current' : '' }}></span>
                     </li>
                     @if (Auth::check())
                         <li class="section-members-login-panel">

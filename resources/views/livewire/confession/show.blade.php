@@ -33,21 +33,20 @@
         </div>
         <div class="section-post wrap">
             <div class="post-wrap {{ $confession->banner ? '' : 'no-image' }} {{ $confession->isPaidContent() ? 'no-access' : '' }}">
-                @if ($confession->isPaidContent() && ! Auth::user()->hasPremium())
-                    <div class="members-teaser">
-                        <p>{{ $confession->trailer_content }}</p>
-                    </div>
-                    <div class="members-cta members-cta-white">
-                        <h2 class="members-cta-title members-cta-white">Confession này chỉ dành cho hội viên</h2>
-                        <p>Đăng kí và nâng cấp tài khoản để có thể đọc và có thể truy cập toàn bộ những confession khác</p>
-                        <a class="members-cta-button global-button" href="#">Đăng kí</a>
-                        <a href="javascript:" class="members-cta-button global-button" data-portal="account/plans">See plans</a>
-
-                    </div>
+                @if ($confession->isPaidContent())
+                    @if (! Auth::check() || ! Auth::user()->hasPremium())
+                        <div class="members-teaser">
+                            <p>{{ $confession->trailer_content }}</p>
+                        </div>
+                        <div class="members-cta members-cta-white">
+                            <h2 class="members-cta-title members-cta-white">Confession này chỉ dành cho hội viên</h2>
+                            <p>Đăng kí và nâng cấp tài khoản để có thể đọc và có thể truy cập toàn bộ những confession khác</p>
+                            <a wire:navigate class="members-cta-button global-button" href="{{ route('membership') }}">Đăng kí</a>
+                        </div>
+                    @endif
                 @else
                     <p>{{ $confession->content }}</p>
                 @endif
-
             </div>
             <div class="post-meta">
                 <div class="post-share">
