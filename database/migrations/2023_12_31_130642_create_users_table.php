@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('avatar')->default('https://i.pinimg.com/564x/8a/93/6b/8a936b98f707271a872d96aaeb3a1841.jpg');
             $table->boolean('is_dark_mode')->default(false);
             $table->boolean('is_notification')->default(false);
             $table->dateTime('premium_until')->nullable();

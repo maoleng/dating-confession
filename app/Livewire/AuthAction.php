@@ -36,6 +36,7 @@ class AuthAction extends Component
             ],
             [
                 'name' => $user->getName(),
+                'avatar' => $user->getAvatar(),
             ],
         );
         Auth::login($user);
