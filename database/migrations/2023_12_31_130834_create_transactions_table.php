@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->integer('money');
-            $table->integer('given_money');
+            $table->integer('given_money')->default(0);
             $table->integer('duration');
             $table->integer('status')->default(TransactionStatus::WAITING);
             $table->string('note');

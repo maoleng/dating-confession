@@ -32,19 +32,19 @@
                 <h4>Bộ sưu tập của bạn</h4>
             </div>
             <div class="page-tag-wrap other is-image">
-                <a href="/tag/journey/" class="item-link-overlay"></a>
+                <a href="{{ route('collection', ['p' => 'history']) }}" class="item-link-overlay"></a>
                 <div class="page-tag-image" style="background-image: url(https://images.unsplash.com/photo-1498637841888-108c6b723fcb?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;75&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;830&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ)"></div>
-                <h2><a href="/tag/journey/">Lịch sử</a></h2>
+                <h2><a href="{{ route('collection', ['p' => 'history']) }}">Lịch sử</a></h2>
             </div>
             <div class="page-tag-wrap other is-image">
-                <a href="/tag/architecture/" class="item-link-overlay"></a>
+                <a href="{{ route('collection', ['p' => 'watch-later']) }}" class="item-link-overlay"></a>
                 <div class="page-tag-image" style="background-image: url(https://images.unsplash.com/photo-1498568584133-7b76cea38337?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;75&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;830&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ)"></div>
-                <h2><a href="/tag/architecture/">Xem sau</a></h2>
+                <h2><a href="{{ route('collection', ['p' => 'watch-later']) }}">Xem sau</a></h2>
             </div>
             <div class="page-tag-wrap other is-image">
-                <a href="/tag/lifestyle/" class="item-link-overlay"></a>
+                <a href="{{ route('collection', ['p' => 'liked']) }}" class="item-link-overlay"></a>
                 <div class="page-tag-image" style="background-image: url(https://images.unsplash.com/photo-1533987316049-f862f4a9af19?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;75&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;830&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ)"></div>
-                <h2><a href="/tag/lifestyle/">Đã thích</a></h2>
+                <h2><a href="{{ route('collection', ['p' => 'liked']) }}">Đã thích</a></h2>
             </div>
 
         </div>

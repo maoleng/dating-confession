@@ -20,7 +20,7 @@ class Site extends Component
         $this->slider_confessions = Confession::query()->whereNotNull('banner')->take(3)->get();
         $p_confessions = Confession::query()->whereNotIn('id', $this->slider_confessions->pluck('id')->toArray())->paginate(9);
         $this->confessions = $p_confessions->items();
-        $this->page_count = $p_confessions->total();
+        $this->page_count = $p_confessions->lastPage();
         $this->cur_page = $p_confessions->currentPage();
     }
 
