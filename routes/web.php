@@ -5,6 +5,8 @@ use App\Http\Middleware\MustNotLogin;
 use App\Livewire\AuthAction;
 use App\Livewire\Confession\Show;
 use App\Livewire\Me;
+use App\Livewire;
+use App\Livewire\Membership;
 use App\Livewire\Payment;
 use App\Livewire\Site;
 use Illuminate\Support\Facades\Auth;
@@ -12,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Site::class)->name('index');
 Route::get('/me', Me::class)->middleware(MustLogin::class)->name('me');
+Route::group(['prefix' => 'membership', 'as' => 'membership.', 'middleware' => MustLogin::class], static function () {
+    Route::get('/', Membership\Index::class)->name('index');
+});
 Route::group(['prefix' => 'payment', 'as' => 'payment.', 'middleware' => MustLogin::class], static function () {
     Route::get('/', Payment::class)->name('index');
     Route::post('/cancel', [Payment::class, 'cancelPayment'])->name('cancel');

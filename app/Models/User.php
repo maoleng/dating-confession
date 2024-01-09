@@ -32,21 +32,28 @@ class User extends Authenticatable
 
     public function getPremiumDescriptionAttribute(): string
     {
-        if ($this->premium_until) {
-            $premium_until = Carbon::make($this->premium_until);
-            if ($premium_until->gt(now())) {
-                return "Premium ({$premium_until->longRelativeDiffForHumans(parts: 4)})";
-            }
-
-            return 'Free';
-        }
-
-        return 'Free';
+        return $this->hasPremium()
+            ? "Premium (" . Carbon::make($this->premium_until)->longRelativeDiffForHumans(parts: 4) . ")"
+            : 'Free';
     }
 
     public function hasTransactionUncompleted(): bool
     {
         return $this->transactions()->where('status', TransactionStatus::WAITING)->exists();
+    }
+
+    public function hasPremium(): bool
+    {
+        if ($this->premium_until) {
+            $premium_until = Carbon::make($this->premium_until);
+            if ($premium_until->gt(now())) {
+                return true;
+            }
+
+            return false;
+        }
+
+        return false;
     }
 
     protected static function booted(): void

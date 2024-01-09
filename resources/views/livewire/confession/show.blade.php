@@ -1,3 +1,4 @@
+@php use \Illuminate\Support\Facades\Auth; @endphp
 @section('body-class'){{ $body_class }}@endsection
 <div>
     <article>
@@ -32,15 +33,16 @@
         </div>
         <div class="section-post wrap">
             <div class="post-wrap {{ $confession->banner ? '' : 'no-image' }} {{ $confession->isPaidContent() ? 'no-access' : '' }}">
-                @if ($confession->isPaidContent())
+                @if ($confession->isPaidContent() && ! Auth::user()->hasPremium())
                     <div class="members-teaser">
                         <p>{{ $confession->trailer_content }}</p>
                     </div>
                     <div class="members-cta members-cta-white">
-                        <h2 class="members-cta-title members-cta-white">This confession is for paying subscribers only</h2>
-                        <p>Sign up now and upgrade your account to read the post and get access to the full library of confession for paying subscribers only.</p>
-                        <a class="members-cta-button global-button" href="#">Sign up now</a>
-                        <small>Already have an account? <a class="members-cta-white" href="#">Sign in</a></small>
+                        <h2 class="members-cta-title members-cta-white">Confession này chỉ dành cho hội viên</h2>
+                        <p>Đăng kí và nâng cấp tài khoản để có thể đọc và có thể truy cập toàn bộ những confession khác</p>
+                        <a class="members-cta-button global-button" href="#">Đăng kí</a>
+                        <a href="javascript:" class="members-cta-button global-button" data-portal="account/plans">See plans</a>
+
                     </div>
                 @else
                     <p>{{ $confession->content }}</p>

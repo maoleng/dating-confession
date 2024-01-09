@@ -9,13 +9,13 @@
     <div class="search-wrap">
         <div class="search-content">
             <form class="search-form flex" onsubmit="return false">
-                <input type="text" class="search-input" placeholder="Type your keywords..." aria-label="Type your keywords...">
+                <input type="text" class="search-input" placeholder="Nhập nội dung tìm kiếm..." aria-label="Nhập nội dung tìm kiếm...">
             </form>
             <div class="search-meta">
-                <span class="search-info-wrap">Please enter at least 3 characters</span>
+                <span class="search-info-wrap">Nhập ít nhất 3 kí tự</span>
                 <span class="search-counter-wrap hide">
                         <span class="counter-results">0</span>
-                        Results for your search</span>
+                        Kết quả tìm kiếm</span>
             </div>
             <div class="search-results"></div>
             <div class="search-suggestion flex">
