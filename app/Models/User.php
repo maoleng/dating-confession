@@ -33,9 +33,12 @@ class User extends Authenticatable
 
     public function getPremiumDescriptionAttribute(): string
     {
+        Carbon::setLocale('vi');
+
         return $this->hasPremium()
-            ? "Premium (" . Carbon::make($this->premium_until)->longRelativeDiffForHumans(parts: 4) . ")"
-            : 'Free';
+            ? 'Còn hiệu lực trong '.Carbon::make($this->premium_until)->shortAbsoluteDiffForHumans(parts: 4).'
+            . (<a class="t-hover" href="'.route('payment.history').'">Xem lịch sử giao dịch</a>)'
+            : 'Miễn phí';
     }
 
     public function hasTransactionUncompleted(): bool

@@ -3,6 +3,7 @@
 use App\Http\Middleware\MustLogin;
 use App\Http\Middleware\MustNotLogin;
 use App\Livewire\AuthAction;
+use App\Livewire\Collection;
 use App\Livewire\Confession\Show;
 use App\Livewire\Me;
 use App\Livewire;
@@ -18,6 +19,7 @@ Route::get('/membership', Membership::class)->name('membership');
 
 Route::group(['prefix' => 'payment', 'as' => 'payment.', 'middleware' => MustLogin::class], static function () {
     Route::get('/', Payment::class)->name('index');
+    Route::get('/history', [Payment::class, 'history'])->name('history');
     Route::post('/cancel', [Payment::class, 'cancelPayment'])->name('cancel');
     Route::post('/validate', [Payment::class, 'validatePayment'])->name('validate');
 });

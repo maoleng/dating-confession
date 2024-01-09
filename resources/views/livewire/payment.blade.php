@@ -44,10 +44,10 @@
 
                     <br><br>
                     <span class="fs-120">
-                        Gặp khó khăn khi giao dịch? <a href="https://www.facebook.com/" target="_blank">Liên hệ</a>
+                        Gặp khó khăn khi giao dịch? <a class="t-hover" href="https://www.facebook.com/" target="_blank">Liên hệ</a>
                     </span>
                     <p id="btn-cancel" class="c-link fs-120">
-                        <a class="fs-120">
+                        <a class="t-hover">
                             <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/></svg>
                             Quay lại
                         </a>
@@ -88,14 +88,14 @@
                         </li>
                     </ul>
                     <p align="center" class="c-link">
-                        <a onclick="showBankInfo()" id="btn-view_bank" aria-label="link Website">
+                        <a onclick="showBankInfo()" id="btn-view_bank" class="t-hover" aria-label="link Website">
                             Xem thông tin chuyển khoản
                         </a>
-                        <a onclick="showQRCode()" id="btn-view_qr" hidden aria-label="link Website">
+                        <a onclick="showQRCode()" id="btn-view_qr" hidden class="t-hover" aria-label="link Website">
                             Xem mã QR
                         </a>
                         |
-                        <a onclick="downloadQR()" aria-label="link Website">
+                        <a onclick="downloadQR()" class="t-hover" aria-label="link Website">
                             Tải mã QR về
                         </a>
                     </p>
@@ -120,7 +120,7 @@
             fill: white;
         }
 
-        .c-link a:hover svg {
+        .c-link a[class="t-hover"]:hover svg {
             fill: var(--gradient-green-end);
         }
 
@@ -128,8 +128,8 @@
             color: var(--gradient-green-end) !important;
             outline: 0 !important;
         }
-        a:hover,
-        a:focus {
+        a[class="t-hover"]:hover,
+        a[class="t-hover"]:focus {
             text-decoration: none !important;
             color: var(--gradient-green-end) !important;
             outline: 0 !important;

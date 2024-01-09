@@ -23,10 +23,6 @@
                         <span class="nav-dot {{ Route::is('membership') ? 'nav-dot-current' : '' }}"></span>
                     </li>
                     <li class="nav-list-item">
-                        <a href="#" class="nav-link">Bộ sưu tập</a>
-                        <span class="nav-dot"></span>
-                    </li>
-                    <li class="nav-list-item">
                         <a href="#" class="nav-link">Liên hệ</a>
                         <span class="nav-dot"></span>
                     </li>
