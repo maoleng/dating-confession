@@ -76,14 +76,13 @@
         <aside class="section-prev-next">
             <div class="prev-next-wrap">
                 @foreach($confessions as $confession)
-                    <a href="/{{ $confession->slug }}" class="next-post tag-hash-large {{ $confession->colorClass }}">
+                    <a wire:navigate href="/{{ $confession->slug }}" class="next-post tag-hash-large {{ $confession->colorClass }}">
                         <div class="prev-next-image" @if ($confession->banner) style="background-image: url({{ $confession->banner }})" @endif></div>
                         <section class="prev-next-title">
                             <h3>{{ $confession->title }}</h3>
                         </section>
                     </a>
                 @endforeach
-
             </div>
         </aside>
     @endif
