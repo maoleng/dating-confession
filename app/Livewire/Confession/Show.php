@@ -23,7 +23,7 @@ class Show extends Component
         $this->confessions = Auth::check()
             ? Confession::query()->whereDoesntHave('historyUsers', function ($q) {
                 $q->where('user_id', Auth::id());
-            })->limit(2)->get()
+            })->inRandomOrder()->limit(2)->get()
             : Confession::query()->inRandomOrder()->limit(2)->get();
     }
 
