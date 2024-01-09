@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Site::class)->name('index');
 Route::get('/me', Me::class)->middleware(MustLogin::class)->name('me');
-Route::group(['prefix' => 'membership', 'as' => 'membership.', 'middleware' => MustLogin::class], static function () {
-    Route::get('/', Membership\Index::class)->name('index');
-});
+Route::get('/membership', Membership::class)->name('membership');
+
 Route::group(['prefix' => 'payment', 'as' => 'payment.', 'middleware' => MustLogin::class], static function () {
     Route::get('/', Payment::class)->name('index');
     Route::post('/cancel', [Payment::class, 'cancelPayment'])->name('cancel');

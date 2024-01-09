@@ -10,4 +10,9 @@ class Card extends Component
 
     public Collection $subscriptions;
 
+    public function chooseSubscription($subscription): void
+    {
+        $this->redirectRoute('payment.index', ['subscription' => $subscription], navigate: true);
+    }
+
 }

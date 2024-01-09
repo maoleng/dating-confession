@@ -1,4 +1,5 @@
 @php use \Illuminate\Support\Facades\Auth; @endphp
+@php use \Illuminate\Support\Facades\Route; @endphp
 <div class="section-header wrap">
     <header class="header-wrap flex">
         <div class="header-logo">
@@ -15,11 +16,11 @@
                 <ul class="nav-list">
                     <li class="nav-list-item">
                         <a wire:navigate href="{{ route('index') }}" class="nav-link">Trang chủ</a>
-                        <span class="nav-dot"></span>
+                        <span class="nav-dot {{ Route::is('index') ? 'nav-dot-current' : '' }}"></span>
                     </li>
                     <li class="nav-list-item">
-                        <a wire:navigate href="{{ route('membership.index') }}" class="nav-link">Hội viên</a>
-                        <span class="nav-dot"></span>
+                        <a wire:navigate href="{{ route('membership') }}" class="nav-link">Hội viên</a>
+                        <span class="nav-dot {{ Route::is('membership') ? 'nav-dot-current' : '' }}"></span>
                     </li>
                     <li class="nav-list-item">
                         <a href="#" class="nav-link">Bộ sưu tập</a>

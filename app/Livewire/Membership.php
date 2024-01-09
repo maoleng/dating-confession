@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Livewire\Membership;
+namespace App\Livewire;
 
 use App\Models\Subscription;
 use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
 
-class Index extends Component
+class Membership extends Component
 {
 
     public Collection $subscriptions;
