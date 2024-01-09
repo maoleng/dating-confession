@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Facades\URL;
 
 class Confession extends Base
@@ -18,6 +19,11 @@ class Confession extends Base
         'view',
         'created_at',
     ];
+
+    public function historyUsers(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'confession_history');
+    }
 
     public function getYearCreatedAttribute(): string
     {

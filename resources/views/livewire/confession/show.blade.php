@@ -72,25 +72,21 @@
             </div>
         </div>
     </article>
-    <aside class="section-prev-next">
-        <div class="prev-next-wrap">
-            <a href="/im-passionate-about-food-the-tradition-of-it-cooking-it-sharing-it/" class="next-post post tag-lifestyle tag-hash-large featured is-image">
-                <div class="prev-next-image" style="background-image: url(https://images.unsplash.com/photo-1524222717473-730000096953?ixlib&#x3D;rb-0.3.5&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;1080&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ&amp;s&#x3D;8b1938d0d4ef26e336db84568708980a)"></div>
-                <section class="prev-next-title">
-                    <h5>Older Post</h5>
-                    <h3>I&#x27;m passionate about food, the tradition of it, cooking it, sharing it</h3>
-                </section>
-            </a>
-            <a href="/you-must-grow-like-a-tree/" class="next-post post tag-story tag-hash-violet tag-lifestyle tag-hash-post-violet no-image ">
-                <section class="prev-next-title">
-                    <h5>Older Post</h5>
-                    <h3>You must grow like a tree</h3>
-                </section>
-            </a>
-        </div>
-    </aside>
-    <div class="section-disqus">
-    </div>
+    @if ($confessions->isNotEmpty())
+        <aside class="section-prev-next">
+            <div class="prev-next-wrap">
+                @foreach($confessions as $confession)
+                    <a href="/{{ $confession->slug }}" class="next-post tag-hash-large {{ $confession->colorClass }}">
+                        <div class="prev-next-image" @if ($confession->banner) style="background-image: url({{ $confession->banner }})" @endif></div>
+                        <section class="prev-next-title">
+                            <h3>{{ $confession->title }}</h3>
+                        </section>
+                    </a>
+                @endforeach
+
+            </div>
+        </aside>
+    @endif
 </div>
 @push('page-script')
     <script src="{{ asset('assets/js/post.js') }}"></script>
