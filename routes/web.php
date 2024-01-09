@@ -5,6 +5,7 @@ use App\Http\Middleware\MustNotLogin;
 use App\Livewire\AuthAction;
 use App\Livewire\Collection;
 use App\Livewire\Confession\Show;
+use App\Livewire\Contact;
 use App\Livewire\Me;
 use App\Livewire;
 use App\Livewire\Membership;
@@ -15,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Site::class)->name('index');
 Route::get('/membership', Membership::class)->name('membership');
-Route::get('/contact', Membership::class)->name('contact');
+Route::get('/contact', Contact::class)->name('contact');
+Route::post('/contact', [Contact::class, 'store'])->name('contact.store');
 Route::get('/me', Me::class)->middleware(MustLogin::class)->name('me');
 Route::get('/collection', Collection::class)->middleware(MustLogin::class)->name('collection');
 Route::group(['prefix' => 'payment', 'as' => 'payment.', 'middleware' => MustLogin::class], static function () {
